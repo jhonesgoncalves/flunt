@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marvel Wrapper Test</title>
+</head>
+<body>
+
+  <div id="comics"></div>
+
+  <script src="../dist/marvel-wrapper.min.js"></script>
+
+  <script>
+   const marvel = new MarvelWrapper({
+    privateKey: '0f58ef56308890fca54f7c27129208333677efdf',
+    publicKey: '113fe8d9f18142601caca4864045c804'
+   });
+
+   const comics = marvel.comic.getComics();
+   const comicsEl = document.getElementById('comics');
+
+   comics
+     .then(response => {
+       markup = response.data.results.map(item =>
+         `<img src='${item.thumbnail.path}.${item.thumbnail.extension}' alt='${item.name}' />`).join('');
+       console.log(response);
+       comicsEl.innerHTML = markup;
+     });
+
+  </script>
+</body>
+</html>

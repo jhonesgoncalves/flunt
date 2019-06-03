@@ -1,0 +1,76 @@
+{
+  "name": "exemplo",
+  "version": "1.0.9",
+  "description": "Exemplo for lib",
+  "main": "lib/index.js",
+  "scripts": {
+    "clear": "rimraf lib && rimraf dist",
+    "create:lib": "./node_modules/.bin/babel --out-dir lib src",
+    "build": "npm run clear && npm run create:lib",
+    "build:watch": "npm run clear && npm run create:lib -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename exemplo.js",
+    "build:umd:min": "./node_modules/.bin/webpack --output-filename exemplo.min.js -p",
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonesgoncal/exemplo.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Jhones Goncalves <jhones.goncalves@outlook.com> (http://jhonesgoncalves.esy.es/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhonesgoncal/exemplo/issues"
+  },
+  "homepage": "https://github.com/jhonesgoncal/exemplo#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.11.9",
+    "mocha": "^4.0.1",
+    "node-fetch": "^1.7.3",
+    "nyc": "^11.4.1",
+    "rimraf": "^2.6.2",
+    "sinon": "^4.1.3",
+    "sinon-chai": "^2.14.0",
+    "sinon-stub-promise": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "eslint": "^4.12.1",
+    "md5": "^2.2.1"
+  }
+}
