@@ -1,7 +1,7 @@
 {
-  "name": "exemplo",
-  "version": "1.0.9",
-  "description": "Exemplo for lib",
+  "name": "flunt",
+  "version": "1.0.0",
+  "description": "Library for notifications and validations",
   "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib && rimraf dist",
