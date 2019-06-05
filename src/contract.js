@@ -40,4 +40,16 @@ export default class Contract {
         
         return this;
     }
+
+    isValid() {
+        return this.notifications.length == 0;
+    }
+
+    getNotifications() {
+        return this.notifications;
+    }
+
+    getMessages() {
+        return this.notifications.map(x => x.message);
+    }
 }

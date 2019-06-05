@@ -4,6 +4,10 @@ import sinonChai from 'sinon-chai';
 import sinonStubPromise from 'sinon-stub-promise';
 
 import {Notification, Notifiable, Contract} from '../src/index';
+// const Flunt = require('../src/index')
+// const Notification = Flunt.Notification;
+// const Contract = Flunt.Contract;
+// const Notifiable = Flunt.Notifiable;
 
 chai.use(sinonChai);
 sinonStubPromise(sinon);

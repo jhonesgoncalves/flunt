@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/jhonesgoncal/marvel-wrapper.svg?branch=master)](https://travis-ci.org/jhonesgoncal/marvel-wrapper) [![Coverage Status](https://coveralls.io/repos/github/jhonesgoncal/marvel-wrapper/badge.svg?branch=master)](https://coveralls.io/github/jhonesgoncal/marvel-wrapper?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A wrapper to work with the [Marvel Web API](https://developer.marvel.com).
+
+## What is Flunt?
+Every app has business rules and validations, and you probably will need to keep all the errors and notifications that happened and send it to somewhere, maybe to your UI.
+
+Flunt implements the Notification Pattern and helps you to track everything that happend, consolidating your notifications and making it easy to access and manipulate.
 
 ## Browser Support
 

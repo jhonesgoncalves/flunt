@@ -83,6 +83,45 @@ describe('Contract', () => {
         });      
     });
 
+    describe('- isValid', () => {
+        it('should return false', () => {
+            let contract = new Contract();
+            contract.isEmail("value", "Email", "notification test");
+            expect(contract.isValid()).to.be.equal(false)
+        });
+        
+        it('should return true', () => {
+            let contract = new Contract();
+            expect(contract.isValid()).to.be.equal(true)
+        });      
+    });
+
+    describe('- getMessages', () => {
+        it('should return one message', () => {
+            let contract = new Contract();
+            contract.isEmail("value", "Email", "notification test");
+            expect(contract.getMessages()[0]).to.be.equal("notification test")
+        });
+        
+        it('should return not return message', () => {
+            let contract = new Contract();
+            expect(contract.getMessages().length).to.be.equal(0)
+        });      
+    });
+
+    describe('- getNotifications', () => {
+        it('should return one notification', () => {
+            let contract = new Contract();
+            contract.isEmail("value", "Email", "notification test");
+            expect(contract.getNotifications().length).to.be.equal(1)
+        });
+        
+        it('should return not return notification', () => {
+            let contract = new Contract();
+            expect(contract.getNotifications().length).to.be.equal(0)
+        });      
+    });
+
 
 
 

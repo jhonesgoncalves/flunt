@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flunt Test</title>
+</head>
+
+<body>
+
+  <div id="comics"></div>
+
+  <script src="../dist/flunt.min.js"></script>
+
+  <script>
+    const Flunt = require('../dist/flunt.min.js')
+    const Notification = Flunt.Notification;
+    const Contract = Flunt.Contract;
+    const Notifiable = Flunt.Notifiable;
+
+    function Customer() {
+
+    }
+
+    Customer.prototype = new Notifiable();
+    Customer.prototype.constructor = Customer;
+
+    var customer = new Customer();
+    console.log(customer)
+
+  </script>
+</body>
+
+</html>
