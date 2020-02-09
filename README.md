@@ -1,4 +1,4 @@
-# Exemplo
+# FluntJS
 
 [![Build Status](https://travis-ci.com/jhonesgoncal/flunt.svg?branch=master)](https://travis-ci.com/jhonesgoncal/flunt) [![Coverage Status](https://coveralls.io/repos/github/jhonesgoncal/flunt/badge.svg?branch=master)](https://coveralls.io/github/jhonesgoncal/flunt?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -11,7 +11,7 @@ Flunt implements the Notification Pattern and helps you to track everything that
 ## Installation
 
 ```sh
-$ npm install flunt --save
+$ npm install flunt-js --save
 ```
 
 ## How to use
@@ -20,7 +20,7 @@ $ npm install flunt --save
 
 ```js
 
-import Flunt from 'flunt';
+import Flunt from 'flunt-js';
 
 // extends your class to Flunt.Notifiable
 class Customer extends Flunt.Notifiable{
