@@ -53,5 +53,20 @@ describe('Notifiable', () => {
     let notifiable = new Notifiable();
     expect(notifiable.isValid()).to.be.equal(true)
   });
-  
+
+  describe('- getMessages', () => {
+    it('should return one message', () => {
+        let contract = new Contract();
+        contract.isEmail("value", "Email", "notification test");
+        let notifiable = new Notifiable();
+        notifiable.AddNotifications(contract);
+        expect(notifiable.getMessages()[0]).to.be.equal("notification test")
+    });
+
+    it('should return not return message', () => {
+        let notifiable = new Contract();
+        expect(notifiable.getMessages().length).to.be.equal(0);
+    });
+});
+
 });

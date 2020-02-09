@@ -111,7 +111,7 @@ isFixedLen(value, len, property, message)
 isEmail(value, property, message)
 IsGreaterThan(val, comparer, property, message)
 
-//To take messages and notifications
+//To get messages and notifications
 getNotifications()
 getMessages()
 
@@ -131,6 +131,12 @@ isValid()
 ```js
 AddNotification(property, message)
 AddNotifications(contract)
+
+// To get messages
+getMessages()
+
+// To know if is valid
+isValid()
 ```
 
 ## Contributing

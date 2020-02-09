@@ -26,4 +26,8 @@ export default class Notifiable {
   isValid() {
     return this.notifications.length === 0;
   }
+
+  getMessages() {
+    return this.notifications.map(x => x.message);
+  }
 }
