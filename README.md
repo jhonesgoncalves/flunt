@@ -4,7 +4,7 @@
 
 
 ## What is Flunt?
-Inspire in [Flunt](https://github.com/andrebaltieri/flunt), Every app has business rules and validations, and you probably will need to keep all the errors and notifications that happened and send it to somewhere, maybe to your UI.
+Inspired in [Flunt](https://github.com/andrebaltieri/flunt), Every app has business rules and validations, and you probably will need to keep all the errors and notifications that happened and send it to somewhere, maybe to your UI.
 
 Flunt implements the Notification Pattern and helps you to track everything that happend, consolidating your notifications and making it easy to access and manipulate.
 

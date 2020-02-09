@@ -1,5 +1,5 @@
 {
-  "name": "flunt",
+  "name": "flunt-js",
   "version": "1.0.0",
   "description": "Library for notifications and validations",
   "main": "lib/index.js",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhonesgoncal/exemplo.git"
+    "url": "git+https://github.com/jhonesgoncal/flunt.git"
   },
   "keywords": [
     "js",
@@ -46,9 +46,9 @@
   "author": "Jhones Goncalves <jhones.goncalves@outlook.com> (http://jhones.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jhonesgoncal/exemplo/issues"
+    "url": "https://github.com/jhonesgoncal/flunt/issues"
   },
-  "homepage": "https://github.com/jhonesgoncal/exemplo#readme",
+  "homepage": "https://github.com/jhonesgoncal/flunt#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
