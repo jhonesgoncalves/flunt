@@ -100,7 +100,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 |:---------------------:|
 |  [Jhones Gonçalves](https://github.com/jhonesgoncal/)   |
 
-See also the list of [contributors](https://github.com/jhonesgoncal/marvel-wrapper/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/jhonesgoncal/flunt/contributors) who participated in this project.
 
 ## License
 
