@@ -52,13 +52,52 @@ customer.notifications.forEach(element => {
 console.log(customer.notifications)
 ```
 
+### ES5
+
+```js
+
+const Flunt = require('flunt-js');
+
+// extends your class to Flunt.Notifiable
+class Customer extends Flunt.Notifiable{
+
+  constructor(name, lastname, age){
+    super()
+    this.name = name;
+    this.lastname = lastname;
+    this.age = age;
+
+    super.AddNotifications(
+      new Flunt.Contract()
+        .isRequired(name, "Name", "Name is required")
+        .isRequired(lastname, "Lastname", "Lastname is required")
+        .isGreaterThan(age, 18, "Age", "You need more than 18 years")
+    )
+  }
+}
+
+// To use class
+module.exports = Customer
+
+// instance class
+var customer = new Customer(null, "Goncalves", 10);
+
+// take your messages
+customer.notifications.forEach(element => {
+  console.log(element.message)
+});
+
+//take all notifications
+console.log(customer.notifications)
+```
+
 ## Methods
 
 > Follow the methods that the library provides.
 
 > ## Contract
 
-> Validations methods.
+ Validations methods.
 
 --
 
@@ -71,6 +110,14 @@ hasMaxLen(value, max, property, message)
 isFixedLen(value, len, property, message)
 isEmail(value, property, message)
 IsGreaterThan(val, comparer, property, message)
+
+//To take messages and notifications
+getNotifications()
+getMessages()
+
+// To know if is valid
+isValid()
+
 ```
 
 > ## Notifiable
