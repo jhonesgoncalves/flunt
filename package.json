@@ -1,6 +1,6 @@
 {
   "name": "flunt-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for notifications and validations",
   "main": "lib/index.js",
   "scripts": {
