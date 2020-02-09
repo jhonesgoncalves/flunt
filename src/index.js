@@ -6,5 +6,5 @@ import Contract from './contract';
 export {
   Notifiable,
   Notification,
-  Contract
-}
+  Contract,
+};

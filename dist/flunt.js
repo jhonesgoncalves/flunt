@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["MarvelWrapper"] = factory();
+		exports["Flunt"] = factory();
 	else
-		root["MarvelWrapper"] = factory();
+		root["Flunt"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -162,6 +162,30 @@ var Contract = function () {
 
             return this;
         }
+    }, {
+        key: 'isGreaterThan',
+        value: function isGreaterThan(value, comparer, property, message) {
+            if (value < comparer) this.notifications.push(new _notification2.default(property, message));
+
+            return this;
+        }
+    }, {
+        key: 'isValid',
+        value: function isValid() {
+            return this.notifications.length == 0;
+        }
+    }, {
+        key: 'getNotifications',
+        value: function getNotifications() {
+            return this.notifications;
+        }
+    }, {
+        key: 'getMessages',
+        value: function getMessages() {
+            return this.notifications.map(function (x) {
+                return x.message;
+            });
+        }
     }]);
 
     return Contract;
@@ -195,6 +219,17 @@ var _contract2 = _interopRequireDefault(_contract);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// class Flunt {
+
+//   constructor(){
+//     this.Notifiable = Notifiable;
+//     this.Notification = Notification;
+//     this.Contract = Contract
+//   }
+
+
+// }
+
 exports.Notifiable = _notifiable2.default;
 exports.Notification = _notification2.default;
 exports.Contract = _contract2.default;
@@ -203,7 +238,7 @@ exports.Contract = _contract2.default;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(2).default;
+module.exports = __webpack_require__(2);
 
 
 /***/ }),

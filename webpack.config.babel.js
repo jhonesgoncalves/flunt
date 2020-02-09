@@ -7,7 +7,7 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'MarvelWrapper',
+    library: 'Flunt',
   },
   devtool: 'source-map',
   module: {
